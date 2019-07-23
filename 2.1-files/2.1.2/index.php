@@ -19,7 +19,7 @@
     }
 
 
-    print "</pre>";
+    print '</pre>';
 
     $files = scandir($uploaddir);
 
