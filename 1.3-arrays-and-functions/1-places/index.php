@@ -24,20 +24,24 @@
     }
 
     function reserve($map, $requiredRow, $requiredPlace) {
-        if (($map[$requiredRow][$requiredPlace] == false) && isset($map[$requiredRow][$requiredPlace])) {
+        if (($map[$requiredRow - 1][$requiredPlace - 1] === false) && isset($map[$requiredRow - 1][$requiredPlace - 1])) {
+            global $map; 
+            $map[$requiredRow - 1][$requiredPlace - 1] = true;
             return true;
         }
         return false;
     }
 
-    $chairs = 30;
+    $chairs = 50;
     $map = generate(5, 8, $chairs);
     $requiredRow = 3;
     $requiredPlace = 5;
-
+    
     $reverve = reserve($map, $requiredRow, $requiredPlace);
     logReserve($requiredRow, $requiredPlace, $reverve);
 
+    $reverve = reserve($map, $requiredRow, $requiredPlace);
+    logReserve($requiredRow, $requiredPlace, $reverve);
 
     function logReserve($row, $place, $result){
         if ($result) {
