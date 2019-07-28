@@ -31,11 +31,14 @@
                 if (($j + $countdown) > (count($map[$i]))) {
                     break;
                 }
-                if (($map[$i][$j] === false) && isset($map[$i][$j])) {
+                if ($map[$i][$j] === false) {
                     $countdown--;
                     if ($countdown === 0) {
                         return 'Найдены лучшие подходящие места: c '.($j-$requiredPlaces+2).' по '.($j+1).' в ряду '.($i+1);
                     }
+                }
+                else {
+                    $countdown = $requiredPlaces;
                 }
             }
         }    
@@ -44,7 +47,9 @@
 
     $chairs = 50;
     $map = generate(5, 8, $chairs);
-    $requiredPlaces = 4;
+    $map[0][4] = true;
+    $map[1][2] = true;
+    $requiredPlaces = 5;
     
     echo tryToReserve($map, $requiredPlaces);
 
