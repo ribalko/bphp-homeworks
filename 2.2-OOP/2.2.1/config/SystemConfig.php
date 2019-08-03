@@ -1,6 +1,8 @@
 <?php
 
-class Config extends Singleton
-{
-    const DATABASE_PATH = '/files/database/';
-}
+    class Config extends Singleton
+    {
+        const DATABASE_PATH = './files/database/';
+    }
+
+?>
