@@ -13,7 +13,7 @@ $newUser->password = $_POST['password'];
 $newUser->rate = $_POST['rate']; 
 
 /*Сохранение*/
-$newUser->commit();
+$newUser->addUserFromForm();
 
 /*Далее перенаправление на страницу, с которой производилась отправка формы:*/
 header('HTTP/1.1 200 OK'); 

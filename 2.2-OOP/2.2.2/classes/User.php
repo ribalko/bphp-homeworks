@@ -8,7 +8,7 @@
         public $rate;
 
         public function addUserFromForm() {
-            
+            $this->commit();
         }
     }
 

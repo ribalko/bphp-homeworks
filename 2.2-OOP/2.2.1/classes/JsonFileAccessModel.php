@@ -32,7 +32,6 @@
         public function write($contents)
         {
             $this->connect('w');
-            $filename = $this->fileName;
             fwrite($this->file, $contents);
             $this->disconnect();
             return $contents;          
@@ -52,8 +51,7 @@
         public function writeJson($contents)
         {
             $this->connect('w');
-            $filename = $this->fileName;
-            $json = json_encode($array,JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+            $json = json_encode($contents,JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
             fwrite($this->file, $json);
             $this->disconnect();
             return $contents;              
