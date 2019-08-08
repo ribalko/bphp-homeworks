@@ -1,17 +1,19 @@
 <?php
 /*Подключение необходимых файлов*/
+require '../autoload.php';
+require '../config/SystemConfig.php';
 
 /*Создание объекта*/
-$newuser = new User;
+$newUser = new User;
 
 /*Передача значений свойств из формы в объект*/
-$name = $_POST['name']; 
-$email = $_POST['email']; 
-$password = $_POST['password'];
-$rate = $_POST['rate']; 
+$newUser->name = $_POST['name']; 
+$newUser->email = $_POST['email']; 
+$newUser->password = $_POST['password'];
+$newUser->rate = $_POST['rate']; 
 
 /*Сохранение*/
-$newuser->commit();
+$newUser->commit();
 
 /*Далее перенаправление на страницу, с которой производилась отправка формы:*/
 header('HTTP/1.1 200 OK'); 

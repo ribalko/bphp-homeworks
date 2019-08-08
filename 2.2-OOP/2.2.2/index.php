@@ -26,7 +26,7 @@
 
 ?>
 
-<form action="addUser.php" method="post">
+<form action="./formActions/addUser.php" method="post">
   <input type="text" name="name" placeholder="Имя" required>
   <input type="text" name="password" placeholder="Пароль" required>
   <input type="text" name="email" placeholder="Эл. почта" required>
