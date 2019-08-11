@@ -33,8 +33,7 @@
         {
             $this->connect('w');
             fwrite($this->file, $contents);
-            $this->disconnect();
-            return $contents;          
+            $this->disconnect();      
         }
 
         public function readJson()
@@ -45,7 +44,7 @@
             $contents = fread($this->file, $fileSize);
             $jsonObj = json_decode($contents,true);
             $this->disconnect();
-            return $contents;          
+            return $jsonObj;          
         }
 
         public function writeJson($contents)
@@ -53,8 +52,7 @@
             $this->connect('w');
             $json = json_encode($contents,JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
             fwrite($this->file, $json);
-            $this->disconnect();
-            return $contents;              
+            $this->disconnect();            
         }
     }
 

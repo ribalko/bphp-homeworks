@@ -21,7 +21,7 @@
     require './config/SystemConfig.php';
 
     $test = new Users;
-    $usersList = $test->newQuery()->getObjs();
+    $usersList = $test->displaySortedList();
     print_r($usersList);
 
 ?>
