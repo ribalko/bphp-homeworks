@@ -30,9 +30,18 @@
     function shouldBeIncremented(): bool
     {
         //write your code here
+        if (!$_COOKIE[oldVisitor]) {
+            setcookie("oldVisitor", true, time() + 300);
+            return true;
+        }
+        else return false;
     }
 
     //
+    if (shouldBeIncremented()) {
+        incrementViews(getViews());
+    }
+    
 ?>
 
 <!DOCTYPE html>

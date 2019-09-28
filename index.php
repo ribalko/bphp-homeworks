@@ -46,8 +46,8 @@
             </li>
             <li>Занятие 2.3. Даты. Сессии
                 <ul>
-                    <li><a href="2.3-dates-and-sessions/2.3.1">Задание 2.3.1</a></li>
-                    <li><a href="2.3-dates-and-sessions/2.3.2">Задание 2.3.2</a></li>
+                    <li><a href="2.3-dates-and-sessions/2.3.1-your-tube">Задание 2.3.1</a></li>
+                    <li><a href="2.3-dates-and-sessions/2.3.2-brute-protection">Задание 2.3.2</a></li>
                 </ul>
             </li>          
         </ul>
